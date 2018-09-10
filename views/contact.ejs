@@ -1,0 +1,82 @@
+<% include partials/header %> 
+
+<!DOCTYPE html>
+<html>
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="stylesheets/contact.css">
+<body>
+<div class= "container">
+    <div class= "row">
+      <div class="col-md-8 order-md-1">
+        <div class="text-left">
+          <div class= "contact-message">
+            <a class = 'animated-underline' href= "#"><strong>Contact Us!</strong></a>
+            <h3>If you have any questions or would like to request a quote, please contact me here!</h3>
+          </div>
+          <form id="contact-form" method="POST" action="send" role="form">
+            <div class="form-group">
+              <label for="form_name">Name *</label>
+              <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group">
+              <label for="form_email">Email *</label>
+              <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group">
+              <label for="form_need">Please specify your need *</label>
+              <select id="form_need" name="need" class="form-control" required="required" data-error="Please specify your need.">
+                <option value=""></option>
+                <option value="Request quotation">Request quotation</option>
+                <option value="Request order status">Request order status</option>
+                <option value="Request copy of an invoice">Request copy of an invoice</option>
+                <option value="Other">Other</option>
+              </select>
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group">
+              <label for="form_message">Message *</label>
+              <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please, leave us a message."></textarea>
+              <div class="help-block with-errors"></div>
+            </div>
+            <p class="text-muted">
+            <strong>*</strong> These fields are required.
+            <div>
+              <input type="submit" class="btn btn-success btn-send" value="Send message">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-4 col-xs-12 order-md-2">
+        <div class = "contact">
+            <h2>Address</h2>
+            <p>4860 Jessup Road Cincinnati, Ohio 45247</p>
+            <h2>Email</h2>
+            <p>dgobeille@cinci.rr.com</p>
+            <h2>Phone</h2>
+            <p>513-476-8408</p>
+            <!--The div element for the map -->
+            <div id="map"></div>
+            <script>
+              // Initialize and add the map
+              function initMap() {
+                // The location of Company
+                var midwestSpray = {lat: 39.204986, lng: -84.618483};
+                // The map, centered at Company
+                var map = new google.maps.Map(
+                    document.getElementById('map'), {zoom: 14, center: midwestSpray});
+                // The marker, positioned at company
+                var marker = new google.maps.Marker({position: midwestSpray, map: map});
+              }
+            </script>
+            <script async defer
+              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDW0iZYjijxKwPPWL2yy5DlyjSqzm3uHjw&callback=initMap">
+              </script>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<% include partials/footer %> 

@@ -1,0 +1,20 @@
+{
+  "name": "midwestspray",
+  "version": "1.0.0",
+  "description": "Midwest Spray Website",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^3.21.2",
+    "nodemailer": "^4.6.8"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jamie Gobeille",
+  "license": "ISC"
+}
