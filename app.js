@@ -45,12 +45,12 @@ let transporter = nodemailer.createTransport({
         port: 465,
         secure: true, // true for 465, false for other ports
         auth: {
-        user: "midwestspray@cincytechblog.com", // generated ethereal user
-        pass: "HAl0FreaK12" // generated ethereal password
-    },
-    tls: {
-        rejectUnauthorized: false
-    }
+            user: "midwestspray@cincytechblog.com", // generated ethereal user
+            pass: "HAl0FreaK12" // generated ethereal password
+        },
+        tls: {
+            rejectUnauthorized: false
+        }
 });
 
     // setup email data with unicode symbols
@@ -71,7 +71,7 @@ let transporter = nodemailer.createTransport({
         // Preview only available when sending through an Ethereal account
         console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
         
-res.render("contact", {msg: "message has been sent"});
+res.render("contact");
     });
 });
 

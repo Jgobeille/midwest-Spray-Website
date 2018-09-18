@@ -54,7 +54,7 @@ body {
 
 
 .navbar-dark .navbar-nav .nav-link {
-     color: red;
+    color: red;
     text-decoration: none !important;
     display: inline-block;
     cursor: default;

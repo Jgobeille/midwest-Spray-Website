@@ -20,7 +20,7 @@ h2 {
 }
 
 p:hover { 
-    color: red;
+    color: #ae2012;
 }
 
  #map {
@@ -39,7 +39,7 @@ p:hover {
 }
 
 .animated-underline {
-    color: red;
+    color: #ae2012;
     text-decoration: none !important;
     display: inline-block;
     cursor: default;
@@ -54,24 +54,21 @@ p:hover {
     display: block;
     width: 0%;
     height: 5px;
-    background-color: red;
+    background-color: #ae2012;
     transition: width .7s;
     text-decoration: none;
-    color: red;
+    color: #ae2012;
 }
 
 .animated-underline:hover:after {
     width:100%;
     transition: width .7s;
-    background-color: red;
+    background-color: #ae2012;
     text-decoration: none;
 }
 
 a:hover {
-  color: red;
+  color: #ae2012;
   text-decoration: none!important;
 }
 
-/*.btn .btn-success .btn-send {*/
-/*    padding-bottom: 50px;*/
-/*}*/

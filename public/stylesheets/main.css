@@ -34,16 +34,16 @@ h3:after {
     display: block;
     width: 0%;
     height: 5px;
-    background-color: red;
+    background-color: #ae2012;
     transition: width .7s;
     text-decoration: none;
-    color: red;
+    color: #ae2012;
 }
 
 h3:hover:after {
     width:100%;
     transition: width .7s;
-    background-color: red;
+    background-color: #ae2012;
     text-decoration: none;
 }
 
