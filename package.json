@@ -5,6 +5,7 @@
   "main": "app.js",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
     "ejs": "^2.6.1",
     "express": "^3.21.2",
     "nodemailer": "^4.6.8"
