@@ -1,0 +1,29 @@
+[33mcommit 2508695ee141391c3e24cdba496319e2890995d5[m[33m ([m[1;36mHEAD -> [m[1;32mfeature1[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Jamie Gobeille <djent34@gmail.com>
+Date:   Sat Sep 22 00:27:40 2018 +0000
+
+    added .env and.gitignore files. Placed passwords and API keys inside
+
+[33mcommit 7ba1a6688b04cd523ac606f6264203af331f83b1[m
+Author: Jamie Gobeille <djent34@gmail.com>
+Date:   Thu Sep 20 23:59:34 2018 +0000
+
+    npm'd dotenv
+
+[33mcommit 2a2f5d5f46e036d3bdc9aa5b316fc13a82b02b13[m
+Author: Jamie Gobeille <djent34@gmail.com>
+Date:   Tue Sep 18 00:31:33 2018 +0000
+
+    added bottom Faux navbar for cosmetic effect & fixed the container issue
+
+[33mcommit 2fe4987ac60e7911174c58d164eab24716e5bbfb[m
+Author: Jamie Gobeille <djent34@gmail.com>
+Date:   Mon Sep 10 23:48:04 2018 +0000
+
+    Added spacing at bottom of the page.
+
+[33mcommit 9f036ed81c966bc7fd10514b1b69561678bea75e[m
+Author: Jamie Gobeille <djent34@gmail.com>
+Date:   Mon Sep 10 17:00:22 2018 +0000
+
+    Add version 1 of incomplete website
