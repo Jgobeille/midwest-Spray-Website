@@ -5,14 +5,36 @@ var express    = require("express");
 var app        = express();
 var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
+var session    = require('express-session');
+var flash = require('connect-flash');
 
-
+//EJS view engine middleware
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
+
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
+
+
+//express-session middleware
+app.use(session({
+  secret: 'Bella',
+  resave: true,
+  saveUninitialized: true,
+}));
+
+
+//Express session Middleware
+app.use(require('connect-flash')());
+app.use(function (req, res, next) {
+  res.locals.messages = require('express-messages')(req, res);
+  next();
+});
+
+//flash messages
+app.use(flash());
 
 
 app.get("/", function(req,res) {
@@ -41,6 +63,7 @@ app.post('/send', function(req,res) {
     <h3> Message:</h3>
     <p> ${req.body.message}</p>
 `;
+
 
 // create reusable transporter object using the default SMTP transport
 let transporter = nodemailer.createTransport({
@@ -73,8 +96,8 @@ let transporter = nodemailer.createTransport({
         console.log('Message sent: %s', info.messageId);
         // Preview only available when sending through an Ethereal account
         console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-        
-res.render("contact");
+req.flash('success', 'Thank you for your inquiry! We will contact you shortly!');        
+res.redirect("contact");
     });
 });
 

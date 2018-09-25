@@ -1,0 +1,11 @@
+ <link rel="stylesheet" href="stylesheets/message.css">
+
+<div id="messages">
+<% Object.keys(messages).forEach(function (type) { %>
+  <% messages[type].forEach(function (message) { %>
+   <div class="alert alert-success" + <%= type %>>
+    <%= message %>
+  <% }) %>
+  </div>
+<% }) %>
+</div>
